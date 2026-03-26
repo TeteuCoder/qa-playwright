@@ -14,10 +14,11 @@ export class LoginPage {
   }
 
   async acessar(){
-    await this.page.goto('https://www.saucedemo.com/');
+    await this.page.goto('/');
   }
   
-  async logar(user:'standard_user', pass:'secret_sauce'){
+
+  async logar(user: string, pass: string) {
     await this.usernameInput.fill(user);
     await this.passwordInput.fill(pass);
     await this.LoginButton.click();
